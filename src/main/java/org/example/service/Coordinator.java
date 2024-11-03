@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.service;
 
 
 import org.example.model.task.MapTask;

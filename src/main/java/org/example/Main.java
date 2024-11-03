@@ -1,8 +1,8 @@
 package org.example;
 
 
-import org.example.model.Coordinator;
-import org.example.model.Worker;
+import org.example.service.Coordinator;
+import org.example.service.Worker;
 
 import java.util.ArrayList;
 import java.util.List;

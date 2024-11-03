@@ -1,13 +1,15 @@
-package org.example.model;
+package org.example.service;
 
 import lombok.AllArgsConstructor;
 import org.example.exception.MapTaskException;
 import org.example.exception.ReduceTaskException;
+import org.example.model.KeyValue;
 import org.example.model.task.MapTask;
 import org.example.model.task.ReduceTask;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -104,6 +106,9 @@ public class Worker implements Runnable {
                 result.add(new KeyValue(arr[0], arr[1]));
             }
         }
+
+        File processedFile = new File(path);
+        processedFile.delete();
 
         return result;
     }
